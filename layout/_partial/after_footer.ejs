@@ -1,0 +1,60 @@
+<% UserConfig.loaded_modules.forEach(function(mod){%>
+    <% if (!cache && hexo.debug) { %><!-- module <%- mod -%> Script BEGIN --><%}%>
+    <%var module = UserConfig.modules[mod];if (module && module.js) {%><script src="<%- RealPath(module.js) -%>"></script><%}%>
+    <%- _partial('../_modules/'+mod,{module: module}) -%>
+    <% if (!cache && hexo.debug) { %><!-- module <%- '../_modules/'+mod -%> Script END --><%}%>
+<% }); %>
+<script>
+function loadjs(c,d){var a=document.createElement("script");a.async=!0;a.type="text/javascript";a.src=c;a.charset=d||"gbk";(document.getElementsByTagName("HEAD")[0]||document.getElementsByTagName("BODY")[0]).appendChild(a)};
+var _protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+jQuery(document).ready(function($){
+  $('.content p:first-child').addClass("fp");
+  $('.ajax_widgets').each(function(){var src=$(this).attr('data-src');if(src)$(this).load(site.BASE_URI + 'widgets/'+src+'.html');});
+  $.each(_js2load,function(index,obj){loadjs(obj.src,obj.charset)});
+  $('.hexo_random_posts').each(function(){
+    var c=this;
+    if (!site.posts || !site.posts.length) $.getJSON(site.BASE_URI + 'js/posts.js',function(json){site.posts = json;load_random_posts(c)});
+    else load_random_posts(c);
+  });
+  $('.nav>li').click(function(){
+    if ($(this).attr('id') == 'show_all_contents'){
+      $('.tab-content div').removeClass();
+    }else if ($('.nav-pills #show_all_contents').hasClass('active')){
+      $('.tab-content div').addClass('tab-pane fade');
+    }
+  });
+  
+});
+</script>
+
+<script type="text/javascript">
+//  TOP按钮
+(function($){
+    $(window).scroll(function(){
+      if ($(window).scrollTop()>150){
+        $("#back_to_top").fadeIn(500);
+      }
+      else{
+        $("#back_to_top").fadeOut(500);
+      }
+    });
+    $("#back_to_top").click(function(){
+      $('body,html').animate({scrollTop:0},500);
+      return false;
+    });
+    $("#back_to_top").bind('touchstart', function(event){
+      event.peventDefault();
+      event.stopPropagation();
+      $('body,html').animate({scrollTop:0},500);
+    });
+})(jQuery);
+</script>
+
+<script type="text/javascript">
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?73ca1d91f31b2463befdc1c1827f2576";
+  document.body.appendChild(hm);
+})();
+</script>

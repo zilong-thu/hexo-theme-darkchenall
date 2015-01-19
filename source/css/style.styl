@@ -1,0 +1,399 @@
+@import 'nib'
+
+@media (min-width: 992px)
+  .affix,.affix-bottom
+    width: 213px;
+  .affix
+    position: fixed;
+    top: 80px;
+  .affix-bottom
+    position: absolute;
+  .affix-bottom,.affix,.affix-top
+    margin-top: 0;
+    margin-bottom: 0;
+    left: 10px;
+.pull-left
+  float: left !important
+.pull-right
+  float: right !important
+
+h1,h2,h3,h4,h5,h6
+  font-weight: 500;
+  padding-bottom 10px
+h1
+  margin-top: 10px;
+h2.category
+  color: #8AC763
+.carousel-control
+  .fa
+    position absolute
+    top: 50%
+    z-index: 5
+    display: inline-block
+.tags a 
+   margin-left: 2px;
+   padding: .4em .6em .3em .6em;
+  
+body 
+  padding-top: 70px;
+  background-color: #333;
+  font-size: 16px;
+  color: #dedede;
+
+.widget
+  .list-group
+    margin-bottom 0px
+  ul
+    >li
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    >a
+      text-overflow: ellipsis;
+   .icon:before
+     content: '\f069';
+     color: #4141e9;
+     font: 12px FontAwesome;
+
+article
+  header
+    .title
+      margin-bottom: 0;
+      overflow: hidden;
+      overflow-wrap: break-word;
+      color: #fff;
+      font-size: 34px;
+    span, time a
+      color: #f5a10d;
+      font-size: 16px;
+    .icon
+      color: #258fb8;
+  .post .icon:before 
+    content: '\f15c';
+  .comment .icon:before 
+    content: '\f086';
+  .photo .icon:before 
+    content: '\f030';
+  .link
+    .icon:before 
+      content: '\f0c1';
+    .title a:after 
+      content: '\f08e';
+      color: #999;
+      font: 12px FontAwesome;
+      padding-left: 10px;
+      vertical-align: super;
+  video,img 
+    min-width: 0%;
+    max-width: 100%;
+    height: auto;
+    border: none;
+    border-radius: 5px;
+  .entry
+    hr 
+      border-top: 1px solid #666
+      padding-top: 0;
+      margin-top: 0;
+    h1, h2, h3, h4, h5, h6
+      text-shadow: 1px 1px #000;
+      font-weight: normal;
+      color: #fff;
+      
+    blockquote
+      footer
+        cite before
+        content "—"
+        padding 0 0.3em
+    code
+      white-space: pre
+      word-wrap:break-word
+      overflow:auto
+      color: #03E003;
+      background-color: #222;
+      margin-left: 0.2em;
+      margin-right: 0.2em;
+    .img_block
+      display: block
+      position: relative
+      .caption
+        display: none
+        position: absolute
+        top: 0
+        color: #fff
+  .categories .breadcrumb 
+    padding: 5px 5px;
+    margin-bottom: 0px;
+  .categories .breadcrumb>li+li:before 
+    padding: 0px 2px;
+    content: '/';
+  footer
+    margin-top: 5px;
+    padding-top: 5px;
+    border-top: 1px solid #333
+    border-color: #666;
+    color: #999;
+    font-size: 14px;
+  a.more-link
+    padding: 8px 10px;
+    margin-bottom: 10px;
+    border-radius: 2em;
+    text-decoration: none;
+    background-color: #fff;
+  a.more-link:active
+    box-shadow:1px 1px 10px rgba(0,0,0,0.7) inset;
+
+#sidebar
+  .list-group-item:first-child
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+#widget_tagcloud
+  .tagcloud .entry>a 
+    padding: 3px 5px;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 4px;
+    &:hover
+      background-color: #222;
+      color: #f5a10d !important;
+  .tagcloud .panel-body
+    padding: 10px;
+    border: 1px solid #222;
+    border-radius: 0 0 5px 5px;
+
+#tooltip
+  position:absolute;
+  z-index:1000;
+  word-wrap:break-word;
+  background:#000;
+  text-align:left;
+  padding:5px;
+  min-height:1em;
+  -moz-border-radius:5px;
+  -khtml-border-radius:5px;
+  -webkit-border-radius:5px;
+  border-radius:5px;
+  p
+    color:#F9F9F9;
+    font-size:12px
+  em
+    display:block;
+    margin-top:3px;
+    color:#F60;
+    font-style:normal;
+
+/* 覆盖bootstrap.css 样式*/
+.navbar-inverse
+  border-color: #000;
+  box-shadow: 0 1px 20px rgba(0,0,0,0.5);
+  background-color: #333;
+  .navbar-brand
+    color: #8ac763;
+    font-weight: bold;
+    &:hover
+      color: #56CA0C;
+  .navbar-nav>.active>a,
+  .navbar-nav>li>a:active
+    /* box-shadow: inset 0 8px 10px 0 #080808,inset 4px 35px 65px 5px #3A3A3A; */
+    background-color: #E24D53;
+  .navbar-nav>.active>a:hover,
+  .navbar-nav>li>a:hover
+    /* box-shadow: inset 0 5px 10px #080808,inset 2px 35px 65px 5px #3A3A3A; */
+    background-color: #E24D53;
+  .navbar-toggle
+    border-color: #999;
+a
+  transition: color 0.4s, background-color 0.4s, text-decoration 0.4s;
+a:hover
+  color: #75B0FD;
+.page-header
+  border-bottom: 1px solid #8ac763;
+  h1
+    color: #8ac763;
+.well
+  background-color: #333;
+  border: none;
+  box-shadow: none;
+  padding: 10px 18px;
+  margin-bottom: 30px;
+.breadcrumb
+  background-color: transparent;
+.breadcrumb>li
+  padding-left: 3px;
+.fa-folder:before
+  color: orange;
+.pagination>li>a, .pagination>li>span
+  background-color: #254;
+  color: #eee;
+.pagination>li>a:hover
+  color: #333;
+.pagination>li>span.current
+  background-color: #8f8;
+  color: #000;
+  font-weight: bold;
+.pager li>a, .pager li>span
+  background-color: #254;
+  border: 1px solid #000;
+  border-radius: 2em;
+.pager li>a
+  &:hover
+    background-color: #338B6D;
+    color: #fff;
+.panel-primary>.panel-heading
+  background-color: #212121;
+  border:none;
+  text-align: center;
+  color: #fff;
+.widget ul >li
+  background-color: #333;
+.panel
+  border: none;
+  background-color: #333;
+#widget_category .list-group-item
+ &:hover
+    background-color: #3e3e3e;
+.list-group-item
+  border-color: #222;
+  background-color: #333;
+  a
+    display: block;
+    &:hover
+      text-decoration: none;
+.badge
+  font-size: 14px;
+  background-color: #02856B;
+textarea
+  background-color: #3d3d3d !important;
+  color: #fff !important;
+
+strong
+  color: orange;
+  font-size: 1.05em;
+  text-shadow: 1px 1px 1px #000;
+.dropdown-menu
+  background-color: #222;
+.dropdown-menu>li>a
+  color: #ddd;
+
+figure
+  margin-bottom: 10px;
+  figurecaption
+    font-size: 0.9em;
+
+/*代码高亮*/
+pre
+  font-size: 16px;
+  background: #1d1d1d;
+pre.prettyprint
+  border: none;
+  background: #1d1d1d;
+figcaption
+  text-align: center;
+.highlight
+  figcaption
+    background-color: #1d1d1d;
+    border-bottom: 1px solid #333;
+    border-radius: 5px 5px 0 0;
+    padding: 6px 0;
+  pre
+    border-radius: 5px;
+
+
+/* 页脚 */
+#footer
+  background-color: #2a2a2a;
+  width: 100%;
+  margin: 50px 0 0 0;
+  padding: 50px 30px;
+  .panel-footer
+    background-color: #2a2a2a;
+    color: #ccc;
+    border: none;
+  .panel
+    border: none;
+    background-color: #2a2a2a;
+    box-shadow: none;
+
+/*多说评论框样式*/
+#ds-thread #ds-reset
+  div.ds-comment-body
+    p
+      color: #fff;
+      font-size: 14px;
+    a:hover
+      color: #666;
+  .ds-user-name
+    font-size: 14px;
+  .ds-gradient-bg
+    background: #333;
+  p.ds-powered-by
+    a:hover
+      color: #75B0FD;
+
+.well
+  blockquote
+    font-family: "PT Serif",Georgia,Times,"Times New Roman",KaiTi_GB2312,KaiTi,STKaiti,FangSong,STFangsong,serif;
+    color: #8AC763;
+    border: none;
+    border-radius: 5px;
+    border-top: 1px solid #4D7633;
+    border-bottom: 1px solid #4D7633;
+
+/* 返回顶部 */
+#back_to_top
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background-color:transparent;
+  a
+    display: block;
+    width: 2em;
+    height: 2em;
+    border-radius: 1.5em;
+    border: 1px solid #fff;
+    font: 1.5em sans-serif bold;
+    color: #fff;
+    line-height: 2em;
+    background-color: rgba(60,60,60,0.75);
+    text-decoration: none;
+    text-align: center;
+    z-index: 100;
+    box-shadow: 0 0 4px #222;
+    position: relative;
+    &:hover
+      color: rgb(245, 161, 13);
+    &:active
+      box-shadow: 0 0 2px #222, inset 0 0 6px #000;
+      left: 0.5px;
+      top: 0.5px;
+
+@media (max-width: 768px)
+  body
+    font-size: 14px;
+    transition: font-size 0.4s;
+  .well
+    background-color: #333;
+    padding-left: 10px;
+    padding-right: 10px;
+  #main-col
+    padding-left: 0;
+    padding-right: 0;
+  article
+    header
+      .title
+        margin-top: 0;
+  .nav>li
+    display: inline-block;
+    width: 90px;
+  .navbar-nav>li>a
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+
+/*字体设置*/
+body, h1, h2, h3, h4, h5, h6
+  font-family:"Helvetica Neue", Arial, "Microsoft YaHei",SimHei,"LiHei Pro Medium",STXihei, sans-serif;
+
+
+/* font awesome*/
+.fa.pull-left
+  margin-top: o.2em;

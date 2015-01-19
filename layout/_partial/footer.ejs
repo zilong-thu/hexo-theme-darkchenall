@@ -1,0 +1,24 @@
+<div class="panel-footer">
+  <div id="site-info">
+    <span class='author'>
+  <% if (config.author){ %>
+  &copy; <%= UserConfig.SiteDate %> <%= config.author %>
+  <% } else { %>
+  &copy; <%= UserConfig.SiteDate %> <%= UserConfig.title %>
+  <% } %>
+    &nbsp;&nbsp;</span>
+  <% if (UserConfig.Beian) {%><a href='http://www.miibeian.gov.cn/'><%-UserConfig.Beian%></a></span><%}%>
+  <% if (UserConfig.analytics && UserConfig.analytics.provider) {
+       var provider = UserConfig.analytics.provider.split(',');
+       provider.forEach(function(t){
+     %><span id='analytics-<%-t%>'><%- partial('../_analytics/'+t,{mod_info:UserConfig.analytics[t]}) -%></span><%
+       })
+  }%>
+  </div>
+  <div id="copyright">Blog powered by <a href='http://hexo.io/' target="_blank" <%if (hexo.env.version){%> title="本站由hexo V<%- hexo.env.version%> 生成"<%}%>><strong>hexo</strong></a> Theme 由<strong><a href='https://github.com/chenall/hexo-theme-chenall' target="_blank">chenall V2.2</a></strong>改造而来 <span class="pull-right"> 更新时间: <em><%-time(page.updated,'YYYY-MM-DD HH:mm:ss')%></em></span></div>
+</div>
+<div class="clearfix"></div>
+
+<div id="back_to_top" style="display:none;">
+  <a href="#main" title="点击返回顶部"><i class="glyphicon glyphicon-chevron-up"></i></a>
+</div>
