@@ -1,6 +1,6 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <%
 var title = [];
 if (page.current > 1) title.push(__('page', page.current));
@@ -27,7 +27,15 @@ title.push(UserConfig.title);
 <meta name="description" content="<%= strip_html(page.content).trim().substring(0, 150) %>">
 <% } %>
 <% if (page.keywords){ %><meta name="keywords" content="<%= page.keywords %>"><% } %>
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="format-detection" content="telephone=no">
+<meta name="full-screen" content="yes">
+<meta name="browsermode" content="application">
+<meta name="x5-fullscreen" content="true">
+<meta name="x5-page-mode" content="app">
 
 <% if (page.title){ %><meta property="og:title" content="<%= page.title %>"/><% } %>
 <meta property="og:site_name" content="<%= UserConfig.title -%>"/>

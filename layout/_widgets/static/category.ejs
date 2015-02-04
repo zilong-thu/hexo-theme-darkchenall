@@ -1,2 +1,17 @@
-<%var str = '';if (site.categories.length){str = '<ul class="list-group">';site.categories.sort('name').each(function(item){if (!item.parent && item.posts.length)str += '<li class="list-group-item"><span class="badge">'+ item.posts.length + '</span><a href="' + config.root + item.path + '">' + item.name + '</a></li>';});str += '</ul>';}%>
+<%
+    var totalCount = 0;
+    var str = '';
+    if (site.categories.length){
+        str = '<ul class="list-group">';
+        site.categories.sort('name').each(function(item){
+            if (!item.parent && item.posts.length){
+                str += '<li class="list-group-item"><span class="badge">'+ item.posts.length + '</span><a href="' + config.root + item.path + '">' + item.name + '</a></li>';
+
+                totalCount += item.posts.length;
+            }
+        });
+        str += '</ul>';
+        str += '<div id="total-posts-count" style="padding-top: 8px;text-align: right;"><i class="fa fa-book" style="font-size: 1.2em;margin-right: 10px;"></i> 共计 <span style="color: #ffa500; font-size: 1.2em;">'+ totalCount +'</span> 篇博文</div>';
+    }
+%>
 <%-str%>

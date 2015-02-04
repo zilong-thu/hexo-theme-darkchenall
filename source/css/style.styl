@@ -1,5 +1,10 @@
 @import 'nib'
 
+/* 定义一些变量 */
+mainBgColor = #272822
+darkerBgColor = #1E1F1A
+borderColor = #666
+
 @media (min-width: 992px)
   .affix,.affix-bottom
     width: 213px;
@@ -37,7 +42,7 @@ h2.category
   
 body 
   padding-top: 70px;
-  background-color: #333;
+  background-color: #272822;
   font-size: 16px;
   color: #dedede;
 
@@ -92,7 +97,7 @@ article
     border-radius: 5px;
   .entry
     hr 
-      border-top: 1px solid #666
+      border-top: 1px solid borderColor
       padding-top: 0;
       margin-top: 0;
     h1, h2, h3, h4, h5, h6
@@ -110,7 +115,7 @@ article
       word-wrap:break-word
       overflow:auto
       color: #03E003;
-      background-color: #222;
+      background-color: darkerBgColor;
       margin-left: 0.2em;
       margin-right: 0.2em;
     .img_block
@@ -130,8 +135,8 @@ article
   footer
     margin-top: 5px;
     padding-top: 5px;
-    border-top: 1px solid #333
-    border-color: #666;
+    border-top: 1px solid
+    border-color: borderColor;
     color: #999;
     font-size: 14px;
   a.more-link
@@ -155,11 +160,11 @@ article
     text-decoration: none;
     border-radius: 4px;
     &:hover
-      background-color: #222;
+      background-color: darkerBgColor;
       color: #f5a10d !important;
   .tagcloud .panel-body
     padding: 10px;
-    border: 1px solid #222;
+    border: 1px solid darkerBgColor;
     border-radius: 0 0 5px 5px;
 #widget_category
   li.list-group-item
@@ -192,7 +197,7 @@ article
 .navbar-inverse
   border-color: #000;
   box-shadow: 0 1px 20px rgba(0,0,0,0.5);
-  background-color: #333;
+  background-color: #272822;
   .navbar-brand
     color: #8ac763;
     font-weight: bold;
@@ -208,10 +213,10 @@ article
     background-color: #E24D53;
   .navbar-toggle
     border-color: #999;
-    background-color: #222;
+    background-color: darkerBgColor;
   .navbar-toggle.collapsed
-    border-color: #666;
-    background-color: #333;
+    border-color: darkerBgColor;
+    background-color: mainBgColor;
 a
   transition: color 0.4s, background-color 0.4s, text-decoration 0.4s;
 a:hover
@@ -221,7 +226,7 @@ a:hover
   h1
     color: #8ac763;
 .well
-  background-color: #333;
+  background-color: mainBgColor;
   border: none;
   box-shadow: none;
   padding: 10px 18px;
@@ -236,7 +241,7 @@ a:hover
   background-color: #254;
   color: #eee;
 .pagination>li>a:hover
-  color: #333;
+  color: mainBgColor;
 .pagination>li>span.current
   background-color: #8f8;
   color: #000;
@@ -250,21 +255,21 @@ a:hover
     background-color: #338B6D;
     color: #fff;
 .panel-primary>.panel-heading
-  background-color: #212121;
+  background-color: darkerBgColor;
   border:none;
   text-align: center;
   color: #fff;
 .widget ul >li
-  background-color: #333;
+  background-color: mainBgColor;
 .panel
   border: none;
-  background-color: #333;
+  background-color: mainBgColor;
 #widget_category .list-group-item
  &:hover
     background-color: #3e3e3e;
 .list-group-item
-  border-color: #222;
-  background-color: #333;
+  border-color: darkerBgColor;
+  background-color: mainBgColor;
   a
     display: block;
     &:hover
@@ -283,7 +288,7 @@ strong
   font-size: 1.05em;
   text-shadow: 1px 1px 1px #000;
 .dropdown-menu
-  background-color: #222;
+  background-color: darkerBgColor;
 .dropdown-menu>li>a
   color: #ddd;
 
@@ -295,16 +300,16 @@ figure
 /*代码高亮*/
 pre
   font-size: 16px;
-  background: #1d1d1d;
+  background: darkerBgColor;
 pre.prettyprint
   border: none;
-  background: #1d1d1d;
+  background: darkerBgColor;
 figcaption
   text-align: center;
 .highlight
   figcaption
-    background-color: #1d1d1d;
-    border-bottom: 1px solid #333;
+    background-color: darkerBgColor;
+    border-bottom: 1px solid mainBgColor;
     border-radius: 5px 5px 0 0;
     padding: 6px 0;
   pre
@@ -313,17 +318,17 @@ figcaption
 
 /* 页脚 */
 #footer
-  background-color: #2a2a2a;
+  background-color: darkerBgColor;
   width: 100%;
   margin: 50px 0 0 0;
   padding: 50px 30px;
   .panel-footer
-    background-color: #2a2a2a;
+    background-color: darkerBgColor;
     color: #ccc;
     border: none;
   .panel
     border: none;
-    background-color: #2a2a2a;
+    background-color: darkerBgColor;
     box-shadow: none;
 
 /*多说评论框样式*/
@@ -337,7 +342,7 @@ figcaption
   .ds-user-name
     font-size: 14px;
   .ds-gradient-bg
-    background: #333;
+    background: mainBgColor;
   p.ds-powered-by
     a:hover
       color: #75B0FD;
@@ -347,7 +352,6 @@ figcaption
     font-family: "PT Serif",Georgia,Times,"Times New Roman",KaiTi_GB2312,KaiTi,STKaiti,FangSong,STFangsong,serif;
     color: #8AC763;
     border: none;
-    border-radius: 5px;
     border-top: 1px solid #4D7633;
     border-bottom: 1px solid #4D7633;
 
@@ -370,13 +374,13 @@ figcaption
     text-decoration: none;
     text-align: center;
     z-index: 100;
-    box-shadow: 0 0 4px #222;
+    box-shadow: 0 0 4px darkerBgColor;
     position: relative;
     &:hover
       color: rgb(245, 161, 13);
       border-color: rgb(245, 161, 13);
     &:active
-      box-shadow: 0 0 2px #222, inset 0 0 6px #000;
+      box-shadow: 0 0 2px darkerBgColor, inset 0 0 6px #000;
       left: 0.5px;
       top: 0.5px;
 
@@ -385,7 +389,6 @@ figcaption
     font-size: 14px;
     transition: font-size 0.4s;
   .well
-    background-color: #333;
     padding-left: 10px;
     padding-right: 10px;
   #main-col
