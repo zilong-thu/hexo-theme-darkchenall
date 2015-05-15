@@ -46,8 +46,7 @@ if (item.comments && UserConfig.comments.provider && UserConfig.comments.show_co
 <article>
 <div id="<%- item.layout %>" class="<%- item.layout %> well">
   <div class="post-content">
-    <header class="well-sm">
-      <i class="fa icon fa-4x pull-left"></i>
+    <header>
       <h1 class="title"><%- partial('post/title') %></h1>
       <% if (item.layout != 'page'){ %>
         <span><%- __('Posted on') %>: <i class="fa fa-calendar"></i> <time datetime="<%- item.date.toDate().toISOString() -%>"> <%= item.date.format(UserConfig.date_format) %></time></span>

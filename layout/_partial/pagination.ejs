@@ -1,6 +1,39 @@
-<%if (page.prev || page.next) {%>
-<ul id="pagination" class="pagination pagination-lg">
-  <%- paginator({mid_size:3,end_size:2,show_all: false,prev_text:'&laquo;',next_text:'&raquo;'}).replace(/<a.+?\/a>/g,'<li>$&</li>').replace(/<span[^>]+?current.+?\/span>/g,'<li class="active">$&</li>').replace(/<span.+?\/span>/g,'<li>$&</li>')%>
-  <div class="clearfix"></div>
-</ul>
-<%}%>
+<%if (page.prev || page.next) { %>
+<nav style="text-align: center;">
+  <ul class="pagination">
+    <%
+    var current = page.current;
+    var pageCount = page.total;
+    if(current!=1){
+    %>
+    <li>
+      <a class="pagination-number" href="/<%= page.prev_link %>" title="Previous Page" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <% } %>
+
+    <% var p1 = current-5; if( p1 < 1){ p1=1; } var p2=current+5; if(p2>pageCount){p2=pageCount;}
+    for(var j= p1; j<= p2; j++ ){ 
+        var href = "/page/"+ j + "/";
+        if(j==1){ href = "/"; }
+        if(j==current){
+        %>
+            <li class="active"><span class="pagination-number"><%= j %></span></li>
+        <% } else { %>
+            <li><a class="pagination-number" href="<%= href %>"><%= j %></a></li>
+        <% } %>
+    <% } %>
+
+    <% if(current !=pageCount){ %>
+      <li>
+        <a class="pagination-number" href="/<%= page.next_link %>"  title="Next Page" aria-label="Next">
+          <span aria-hidden="true">&raquo;</span>
+        </a>
+      </li>
+    <% } %>
+  </ul>
+</nav>
+
+
+<% } %>

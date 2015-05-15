@@ -25,13 +25,16 @@ modules:
     js: http://cdn.staticfile.org/respond.js/1.4.2/respond.min.js
     proxy: http://cdn.staticfile.org/respond.js/1.4.2/respond-proxy.html
   jquery:
-    js: http://libs.baidu.com/jquery/1.10.2/jquery.min.js
+    js: /js/jquery-1.10.2.min.js
+    ## js: http://libs.baidu.com/jquery/1.10.2/jquery.min.js
     ## js: http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js
   bootstrap: #强大的CSS框架，由Twitter的开发工程师推出
     ## css: http://cdn.bootcss.com/bootstrap/3.1.0/css/bootstrap.min.css
     ## js: http://cdn.bootcss.com/bootstrap/3.1.0/js/bootstrap.min.js
-    css: http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css
-    js: http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js
+    ## css: http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css
+    ## js: http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js
+    css: /css/bootstrap.min.css
+    js: /js/bootstrap.min.js
   prettify: # Google Code Prettify 代码的高亮显示
     ## css: http://cdn.bootcss.com/prettify/r298/prettify.min.css
     ## js: http://cdn.bootcss.com/prettify/r298/prettify.min.js
