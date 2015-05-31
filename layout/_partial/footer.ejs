@@ -1,5 +1,5 @@
 <div class="panel-footer">
-  <div id="site-info">
+  <p id="site-info">
     <span class='author'>
   <% if (config.author){ %>
   &copy; <%= UserConfig.SiteDate %> <%= config.author %>
@@ -14,8 +14,13 @@
      %><span id='analytics-<%-t%>'><%- partial('../_analytics/'+t,{mod_info:UserConfig.analytics[t]}) -%></span><%
        })
   }%>
+  </p>
+  <div id="copyright">
+    <p>This blog powered by <a href='http://hexo.io/' target="_blank" <%if (hexo.env.version){%> title="本站由hexo V<%- hexo.env.version%> 生成"<%}%>><strong>hexo</strong></a>
+    </p>
+    <p>所使用的主题 <strong><a href="https://github.com/zilong-thu/hexo-theme-darkchenall" target="_blank">hexo-theme-darkchenall</a></strong> 由 <a href='https://github.com/chenall/hexo-theme-chenall' target="_blank">chenall V2.2</a> 改造而来 <span class="pull-right"> 更新时间: <em><%-time(page.updated,'YYYY-MM-DD HH:mm:ss')%></em></span>
+    </p>
   </div>
-  <div id="copyright">Blog powered by <a href='http://hexo.io/' target="_blank" <%if (hexo.env.version){%> title="本站由hexo V<%- hexo.env.version%> 生成"<%}%>><strong>hexo</strong></a> 所使用的<strong><a href="https://github.com/zilong-thu/hexo-theme-darkchenall" target="_blank">hexo-theme-darkchenall</a></strong> 由<a href='https://github.com/chenall/hexo-theme-chenall' target="_blank">chenall V2.2</a>改造而来 <span class="pull-right"> 更新时间: <em><%-time(page.updated,'YYYY-MM-DD HH:mm:ss')%></em></span></div>
 </div>
 <div class="clearfix"></div>
 

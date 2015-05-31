@@ -15,8 +15,8 @@
 
     <% var p1 = current-5; if( p1 < 1){ p1=1; } var p2=current+5; if(p2>pageCount){p2=pageCount;}
     for(var j= p1; j<= p2; j++ ){ 
-        var href = "/page/"+ j + "/";
-        if(j==1){ href = "/"; }
+        var href = page.base + "page/" + j + "/";
+        if(j==1){ href = page.base; }
         if(j==current){
         %>
             <li class="active"><span class="pagination-number"><%= j %></span></li>
@@ -34,6 +34,4 @@
     <% } %>
   </ul>
 </nav>
-
-
 <% } %>
