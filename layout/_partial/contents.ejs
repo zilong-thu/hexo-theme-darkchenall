@@ -25,7 +25,7 @@ if (item.categories && item.categories.length)
     else
       cats[cats.length - 1] += '<li><a href="' + config.root + cat.path + '" itemprop="url">' + cat.name + '</a></li>';
   });
-  item_meta.push('<div class="categories"' + (!index?' itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb" ':'') + 'style="display:inline">' + __('Posted in') + '<span class="breadcrumb fa fa-folder">' + cats.join('</span><span class="breadcrumb">') + '</span></div>');
+  item_meta.push('<div class="categories"' + (!index?' itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb" ':'') + 'style="display:inline"><span class="breadcrumb fa fa-folder" title="Category">' + cats.join('</span><span class="breadcrumb">') + '</span></div>');
 }
 
 if (item.tags && item.tags.length){ 
@@ -33,7 +33,7 @@ if (item.tags && item.tags.length){
     item.tags.forEach(function(tag,i){
     tags.push('<a href="' + config.root + tag.path + '" class="label label-'+ UserConfig.twbs_sty(i) +'" itemprop="url"><span itemprop="title">' + tag.name + '</span></a>');
     });
-    item_meta.push('<span class="tags">' + __('Tagged') + ' ' + tags.join("") + '</span>');
+    item_meta.push('<span class="tags" title="tags"><i class="fa fa-tags"></i> ' + tags.join("") + '</span>');
 }
 
 if (item.updated)
@@ -73,7 +73,7 @@ if (item.comments && UserConfig.comments.provider && UserConfig.comments.show_co
     <% } %>
     <%if (item.layout != "link" && item.layout != 'page') { %>
         <footer id="post-meta">
-        <%- item_meta.join(' | ') %>
+        <%- item_meta.join('&nbsp;&nbsp;') %>
         </footer>
     <%}%>
     <div class="clearfix"></div>

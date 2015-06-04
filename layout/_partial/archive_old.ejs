@@ -7,7 +7,7 @@ if (page.category)
     title = page.category;
     var cur_category = site.categories.findOne({name: page.category});
     site.categories.sort('name').each(function(item,i){
-	if (item.parent && item.parent == cur_category._id)
+    if (item.parent && item.parent == cur_category._id)
         sub_cats.push('<a href="'+ config.root + item.path +'"><span class="label label-'+ UserConfig.twbs_sty(i) +'">'+item.name+'<span class="badge">'+ item.length +'</span></span></a>');
     });
     title += '<small>' + sub_cats.join(' ') + '</small>';
@@ -78,3 +78,15 @@ for(item in item_arr){
 </div>
 
 <%- partial('pagination') %>
+
+
+<p>
+page: <br/>
+  <%= JSON.stringify(page) %>
+</p>
+
+<p>
+  posts: <br/>
+  <%= JSON.stringify(posts) %> <br/>
+  posts.length = <%= posts.length %>
+</p>

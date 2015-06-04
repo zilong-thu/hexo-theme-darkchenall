@@ -240,8 +240,6 @@ a:hover
   background-color: transparent;
 .breadcrumb>li
   padding-left: 3px;
-.fa-folder:before
-  color: orange;
 .pager li>a, .pager li>span
   background-color: #254;
   border: 1px solid #000;
@@ -327,21 +325,6 @@ figcaption
     background-color: darkerBgColor;
     box-shadow: none;
 
-/*多说评论框样式*/
-#ds-thread #ds-reset
-  div.ds-comment-body
-    p
-      color: #fff;
-      font-size: 14px;
-    a:hover
-      color: #666;
-  .ds-user-name
-    font-size: 14px;
-  .ds-gradient-bg
-    background: mainBgColor;
-  p.ds-powered-by
-    a:hover
-      color: #75B0FD;
 
 .well
   blockquote
@@ -351,36 +334,6 @@ figcaption
     border-top: 1px solid #4D7633;
     border-bottom: 1px solid #4D7633;
 
-/* 返回顶部 */
-#back_to_top
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
-  background-color:transparent;
-  a
-    display: block;
-    width: 2em;
-    height: 2em;
-    border-radius: 1.5em;
-    border: 1px solid #fff;
-    font: 1.5em sans-serif bold;
-    color: #fff;
-    line-height: 2em;
-    background-color: rgba(60,60,60,0.75);
-    text-decoration: none;
-    text-align: center;
-    z-index: 100;
-    box-shadow: 0 0 4px darkerBgColor;
-    position: relative;
-    &:hover
-      color: rgb(245, 161, 13);
-      border-color: rgb(245, 161, 13);
-    &:active
-      box-shadow: 0 0 2px darkerBgColor, inset 0 0 6px #000;
-      left: 0.5px;
-      top: 0.5px;
-
-
 
 @media (max-width: 768px)
   body
@@ -389,6 +342,10 @@ figcaption
   .well
     padding-left: 10px;
     padding-right: 10px;
+    blockquote
+      font-size: 14px;
+  pre
+    font-size: 14px;
   #main-col
     padding-left: 0;
     padding-right: 0;
@@ -452,3 +409,6 @@ span.first
 .pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover
   background-color: #272822;
   border-color: #272822;
+
+@import "duoshuo.styl"
+@import "back_to_top.styl"
