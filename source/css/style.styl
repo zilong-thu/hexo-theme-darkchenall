@@ -334,38 +334,6 @@ figcaption
     border-top: 1px solid #4D7633;
     border-bottom: 1px solid #4D7633;
 
-
-@media (max-width: 768px)
-  body
-    font-size: 14px;
-    transition: font-size 0.4s;
-  .well
-    padding-left: 10px;
-    padding-right: 10px;
-    blockquote
-      font-size: 14px;
-  pre
-    font-size: 14px;
-  #main-col
-    padding-left: 0;
-    padding-right: 0;
-  article
-    header
-      .title
-        margin-top: 0;
-  .nav>li
-    display: inline-block;
-    width: 90px;
-  .navbar-nav>li>a
-    padding-top: 5px;
-    padding-bottom: 5px;
-    text-align: center;
-@media (min-width: 1200px)
-  .container
-    width: 1050px;
-
-
-
 /*字体设置*/
 body, h1, h2, h3, h4, h5, h6
   font-family:"Helvetica Neue", Arial, "Microsoft YaHei",SimHei,"LiHei Pro Medium",STXihei, sans-serif;
@@ -410,5 +378,7 @@ span.first
   background-color: #272822;
   border-color: #272822;
 
-@import "duoshuo.styl"
-@import "back_to_top.styl"
+@import "_partial/duoshuo.styl"
+@import "_partial/back_to_top.styl"
+@import "_partial/toc.styl"
+@import "_partial/media_query.styl"

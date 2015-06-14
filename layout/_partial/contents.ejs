@@ -57,7 +57,9 @@ if (item.comments && UserConfig.comments.provider && UserConfig.comments.show_co
     <div class="entry" <%if(!index){%> data-spy="scroll" data-target="#toc" <%}%>>
       <% if (item.excerpt && index){ %>
         <%- item.excerpt %>
-      <% } else { %>
+      <% } else { if (item.toc !== false) {%>   <!--02-->
+        <%- partial('post/toc') %>
+      <% } %>
         <%- item.content %>
       <% } %>
     </div>

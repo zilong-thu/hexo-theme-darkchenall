@@ -139,6 +139,11 @@ widgets:
 # - only tags >= to tag_minium are shown
 tag_minium: 3
 
+#### Toc
+toc:
+  article: true   ## show contents in article.
+  aside: true     ## show contents in aside.
+
 ## Google 跟踪代码管理器 设置
 ## https://www.google.com/tagmanager/
 ## ID 就是对应容器的ID
