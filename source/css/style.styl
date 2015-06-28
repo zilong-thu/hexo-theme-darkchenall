@@ -51,12 +51,12 @@ h6, .h5
    margin-left: 2px;
    padding: 0.3em 0.6em 0.2em 0.6em;
    font-weight: normal;
-  
 body 
   padding-top: 50px;
   background-color: #34352E;
   font-size: 16px;
   color: #dedede;
+  line-height: 1.5;
 
 .widget
   .list-group
@@ -126,10 +126,7 @@ article
       white-space: pre
       word-wrap:break-word
       overflow:auto
-      color: #03E003;
-      background-color: darkerBgColor;
-      margin-left: 0.2em;
-      margin-right: 0.2em;
+      background-color: mainBgColor;
     .img_block
       display: block
       position: relative
@@ -223,8 +220,9 @@ article
     background-color: mainBgColor;
 a
   transition: color 0.4s, background-color 0.4s, text-decoration 0.4s;
-a:hover
-  color: #75B0FD;
+  color: #08B3FD;
+  &:hover
+    color: lighten(#08B3FD, 10%);
 .page-header
   border-bottom: none;
   h1
@@ -336,7 +334,7 @@ figcaption
 
 /*字体设置*/
 body, h1, h2, h3, h4, h5, h6
-  font-family:"Helvetica Neue", Arial, "Microsoft YaHei",SimHei,"LiHei Pro Medium",STXihei, sans-serif;
+  font-family: "Courier New", "Helvetica Neue", Arial, "Microsoft YaHei",SimHei,"LiHei Pro Medium",STXihei, sans-serif;
 
 
 /* font awesome*/
